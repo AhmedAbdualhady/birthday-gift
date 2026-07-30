@@ -1,0 +1,536 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+body {
+
+min-height: 100vh;
+font-family: "Poppins", sans-serif;
+
+background:
+linear-gradient(
+        135deg,
+        #1b0033,
+        #4b006e,
+        #ff4da6
+    );
+
+color: white;
+overflow-x: hidden;
+
+}
+
+
+/* النجوم */
+
+.stars {
+
+position: fixed;
+width: 100%;
+height: 100%;
+
+background-image:
+radial-gradient(white 1px, transparent 1px);
+
+background-size: 50px 50px;
+
+opacity: .5;
+
+animation: moveStars 20s linear infinite;
+
+}
+
+
+@keyframes moveStars {
+
+from {
+transform: translateY(0);
+    }
+
+to {
+transform: translateY(100px);
+    }
+
+}
+
+
+
+/* الصفحةالرئيسية */
+
+.hero {
+
+height: 100vh;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+text-align: center;
+
+padding: 20px;
+
+position: relative;
+
+z-index: 2;
+
+}
+
+
+
+.small-title {
+
+font-size: 22px;
+
+animation: fadeDown 1s;
+
+}
+
+
+
+.name {
+
+font-size: 55px;
+
+margin: 20px 0;
+
+background:
+linear-gradient(
+        90deg,
+        #fff,
+        #ffd700
+    );
+
+
+-webkit-background-clip: text;
+
+background-clip: text;
+
+color: transparent;
+
+animation: glow 2s infinite alternate;
+
+}
+
+
+
+.subtitle {
+
+font-size: 20px;
+
+margin-bottom: 40px;
+
+}
+
+
+
+/* الزر */
+
+button {
+
+border: none;
+
+padding: 18px 35px;
+
+border-radius: 50px;
+
+font-size: 18px;
+
+cursor: pointer;
+
+color: white;
+
+background:
+linear-gradient(
+        45deg,
+        #ff1493,
+        #9b00ff
+    );
+
+
+box-shadow:
+    0 0 20px rgba(255,255,255,.3);
+
+
+transition: .4s;
+
+}
+
+
+button:hover {
+
+transform: scale(1.1);
+
+}
+
+
+.countdown {
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+
+/* الرسالة */
+
+.message,
+.gallery,
+.final {
+
+min-height: 100vh;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+padding: 30px;
+
+}
+
+.final {
+    position: relative;
+    z-index: 100;
+}
+
+#surpriseBtn {
+    position: relative;
+    z-index: 101;
+}
+
+.glass-card {
+
+
+max-width: 600px;
+
+padding: 40px;
+
+border-radius: 25px;
+
+
+background:
+rgba(255,255,255,.15);
+
+
+backdrop-filter: blur(15px);
+
+
+text-align: center;
+
+
+box-shadow:
+    0 0 40px rgba(255,255,255,.2);
+
+
+animation: fadeUp 1s;
+
+}
+
+
+
+.glass-card h2 {
+
+margin-bottom: 25px;
+
+color: #ffd700;
+
+}
+
+
+
+.glass-card p {
+
+line-height: 2;
+
+font-size: 18px;
+
+}
+
+
+
+
+/* الصور */
+
+.gallery {
+
+flex-direction: column;
+
+gap: 30px;
+
+}
+
+
+
+.gallery img {
+
+
+width: 300px;
+
+height: 300px;
+
+object-fit: cover;
+
+
+border-radius: 30px;
+
+
+box-shadow:
+    0 0 40pxrgba(255,255,255,.4);
+
+
+animation: fadeUp 1s;
+
+}
+
+
+
+
+/* النهاية */
+
+
+.popup {
+
+position: fixed;
+
+inset: 0;
+
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+
+text-align: center;
+
+
+background:
+linear-gradient(
+        135deg,
+        #ff1493,
+        #6600ff
+    );
+
+
+z-index: 10;
+
+}
+
+
+
+.popup h1 {
+
+font-size: 55px;
+
+}
+
+
+
+.popup h2 {
+
+font-size: 40px;
+
+color: #ffd700;
+
+}
+
+
+
+.hidden {
+
+display: none;
+
+}
+
+
+
+/* Animations */
+
+
+@keyframes fadeUp {
+
+from {
+
+opacity: 0;
+
+transform: translateY(50px);
+
+    }
+
+
+to {
+
+opacity: 1;
+
+transform: translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes fadeDown {
+
+from {
+
+opacity:0;
+
+transform:translateY(-50px);
+
+    }
+
+
+to {
+
+opacity:1;
+
+transform:translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes glow {
+
+
+from {
+
+text-shadow:
+        0 0 10px #fff;
+
+    }
+
+
+to {
+
+text-shadow:
+        0 0 30px #ffd700;
+
+    }
+
+}
+
+
+
+
+/* للموبايل */
+
+@media(max-width:600px){
+
+
+.name {
+
+font-size:38px;
+
+}
+
+
+.subtitle {
+
+font-size:16px;
+
+}
+
+
+.popup h1 {
+
+font-size:35px;
+
+}
+
+
+.popup h2 {
+
+font-size:28px;
+
+}
+
+
+}
+
+
+
+#fireworks {
+
+position: fixed;
+
+inset: 0;
+
+pointer-events: none;
+
+z-index: 20;
+
+}
+
+
+.profile {
+
+margin-top:25px;
+
+}
+
+
+.profile img {
+
+
+width:180px;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+
+border:5px solid rgba(255,255,255,.8);
+
+
+box-shadow:
+    0 0 30pxrgba(255,215,0,.7);
+
+
+animation: pulse 2s infinite;
+
+}
+
+
+
+@keyframes pulse {
+
+
+    0% {
+
+transform:scale(1);
+
+    }
+
+
+    50% {
+
+transform:scale(1.05);
+
+    }
+
+
+    100% {
+
+transform:scale(1);
+
+    }
+
+}
+
+
+
