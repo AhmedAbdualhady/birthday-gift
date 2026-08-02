@@ -2,152 +2,405 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Birthday ❤️</title>
+<title>A Special Birthday ❤️</title>
 
-<link rel="stylesheet" href="style.css">
-
+<!-- Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- النجوم -->
-<div class="stars"></div>
-
-<!-- القلوب -->
-<div class="hearts"></div>
-
-<!-- الصفحةالأولى -->
-<section class="hero">
-
-<h3 class="small-title">🎉 Happy Birthday 🎉</h3>
-
-<h1 class="name" id="typingName"></h1>
-
-<div class="profile">
-
-<img
-src="images/his-photo.jpg" 
-alt="His Photo">
-
-</div>
-
-
-<p class="subtitle">
-Today is all about you✨
-</p>
-
-
-<div class="countdown">
-
-<h3>Time until your special day ❤️</h3>
-
-<p id="timer">00 : 00 : 00</p>
-
-</div>
 
 
 
-<button id="giftBtn">
-🎁Open Your Gift
-</button>
 
-</section>
+<!-- Video Background -->
 
-<!-- الصفحةالثانية -->
-<section class="message hidden" id="messageSection">
 
-<div class="glass-card">
 
-<h2>💌 A Special Message</h2>
 
-<p>
+<video
+class="bg-video"
+muted
+playsinline
+id="bgVideo">
+<source src="videos/background.mp4" type="video/mp4">
+</video>
 
-Happy Birthday❤️
 
-<br><br>
 
-I wish your life is always filled with happiness,
-beautiful memories, success, and endless smiles.
 
-<br><br>
 
-Thank you for being such a wonderful person.
 
-<br><br>
+<!-- ============================= -->
+<!-- Opening Screen -->
+<!-- ============================= -->
 
-Keep shining because the world becomes brighter with your smile.
+<section id="opening" class="opening">
 
-<br><br>
+<div class="opening-content">
 
-Enjoy your special day. 🎂✨
+<span class="sparkle">✨</span>
 
-</p>
+<h3 class="opening-small">
+A Little Surprise
+</h3>
 
-</div>
-
-</section>
-
-<!-- معرضالصور -->
-<section class="gallery hidden">
-
-<h2>📸 Beautiful Memories</h2>
-
-<img
-id="slider"
-src="images/photo1.jpg"
-alt="Birthday">
-
-</section>
-
-<!-- المفاجأة -->
-<section class="final hidden">
-
-<button id="surpriseBtn">
-
-💖One Last Surprise
-
-</button>
-
-</section>
-
-<!-- شاشةالنهاية -->
-
-<div class="popup hidden">
-
-<h1>
-
-🎂Happy Birthday❤️
-
+<h1 class="opening-title">
+Made Especially For...
 </h1>
 
-<h2>
+<h2 id="typingName" class="typing-name"></h2>
+
+<p class="opening-text">
+Before you continue,
+take a deep breath,
+smile...
+and enjoy every little moment. ❤️
+</p>
+
+<button id="beginBtn" class="primary-btn">
+✨Begin
+</button>
+
+</div>
+
+</section>
+
+<!-- ============================= -->
+<!-- Background -->
+<!-- ============================= -->
+
+<div class="background">
+
+<div class="gradient"></div>
+
+<div class="stars"></div>
+
+<div class="shooting-stars"></div>
+
+<div class="moon"></div>
+
+<div class="particles"></div>
+
+</div>
+
+<!-- ============================= -->
+<!-- Hero -->
+<!-- ============================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<p class="birthday-text">
+
+🎉Happy Birthday🎉
+
+</p>
+
+<h1 id="heroName">
 
 Your Beautiful Name
 
+</h1>
+
+<div class="photo-frame">
+
+<img
+src="images/profile.jpg"
+alt="Birthday Photo">
+
+</div>
+
+<p class="hero-description">
+
+Today is your day.
+May happiness always find you,
+and may every dream become reality.
+
+</p>
+
+<div class="countdown-box">
+
+<h3>
+
+Time Until Your Special Day❤️
+
+</h3>
+
+<div id="timer">
+
+                    00 Days
+                    00 Hours
+                    00 Minutes
+                    00 Seconds
+
+</div>
+
+</div>
+
+<button
+id="giftBtn"
+class="primary-btn">
+
+🎁Open Your Gift
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ============================= -->
+<!-- Envelope -->
+<!-- ============================= -->
+
+<section
+id="letterSection"
+class="letter-section hidden">
+
+<h2>
+
+💌A Letter For You
+
 </h2>
 
-<p>
+<div
+id="envelope"
+class="envelope">
 
-I hope your dreams come true✨
+<div class="envelope-cover"></div>
+
+<div class="letter">
+
+<h3>
+
+Happy Birthday❤️
+
+</h3>
+
+<p id="letterText">
+
+<!-- الرسالةسيتمإضافتهابالجافاسكربت -->
 
 </p>
 
 </div>
 
+</div>
+
+<h3>Tab the envelope💌</h3>
+
+<button
+id="letterNext"
+class="primary-btn hidden">
+
+Next➜
+
+</button>
+
+</section>
+
+<!-- ============================= -->
+<!-- Gallery Section -->
+<!-- ============================= -->
+
+<section class="gallery-section hidden" id="gallery">
+
+<h2>
+📸Beautiful Memories
+</h2>
+
+
+<div class="gallery-container">
+
+
+<button
+class="gallery-btn"
+id="prevBtn">
+
+❮
+
+</button>
+
+
+
+<div class="gallery-image-box">
+
+<img
+id="galleryImage"
+src="images/photo1.jpg"
+alt="Memory">
+
+
+</div>
+
+<button
+class="gallery-btn"
+id="nextBtn">
+
+❯
+
+</button>
+
+
+</div>
+
+
+
+<div class="dots">
+
+<span class="dot active"></span>
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+</div>
+
+<button
+id="galleryNext"
+class="primary-btn hidden">
+
+Next➜
+
+</button>
+
+</section>
+
+
+
+<!-- ============================= -->
+<!-- Memories Story -->
+<!-- ============================= -->
+
+
+<section class="story-section hidden">
+
+
+<div class="story-card">
+
+
+<h2>
+
+✨Our Beautiful Moments
+
+</h2>
+
+
+<p>
+
+Every memory has a special place.
+
+<br><br>
+
+Every smile,
+every laugh,
+and every little moment
+makes life more beautiful.
+
+<br><br>
+
+Keep creating wonderful memories. ❤️
+
+</p>
+
+<button id="storyNextBtn" class="primary-btn">
+Next➜
+</button>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ============================= -->
+<!-- Final Surprise -->
+<!-- ============================= -->
+
+
+<section class="final-section hidden">
+
+
+<button
+id="surpriseBtn"
+class="primary-btn">
+
+
+💖One Last Surprise
+
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+<!-- ============================= -->
+<!-- Final Popup -->
+<!-- ============================= -->
+
+<div id="popup" class="popup hidden">
+
+<div class="popup-content">
+
+<h1>🎂Happy Birthday❤️</h1>
+
+<h2 id="finalName"></h2>
+
+<p>
+May your life always be full of happiness,
+love and beautiful surprises.✨
+</p>
+
+<button id="thankBtn" class="primary-btn">
+❤️Thank You
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Effects Containers -->
+<!-- ============================= -->
+
+
+<div class="hearts"></div>
+
+<div class="confetti"></div>
+
+
+
+<!-- Fireworks Canvas -->
+
 <canvas id="fireworks"></canvas>
 
+<!-- JavaScript -->
+
 <script src="script.js"></script>
+
+
 
 </body>
 
